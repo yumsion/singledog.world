@@ -3,203 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>单身狗保护法</title>
+    <title>单身狗的世界</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
-        }
-        
-        :root {
-            --primary-color: #e74c3c;
-            --secondary-color: #3498db;
-            --light-color: #f8f9fa;
-            --dark-color: #2c3e50;
-            --accent-color: #ff9f43;
-            --text-color: #333;
-            --border-radius: 8px;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background-color: #f5f7fa;
-            color: var(--text-color);
+            background: linear-gradient(135deg, #f9f7f7 0%, #e8e8e8 100%);
+            color: #333;
             line-height: 1.6;
-            padding-bottom: 40px;
-            background-image: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
             min-height: 100vh;
+            padding: 20px;
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
         }
         
-        /* 头部样式 */
         header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #c0392b 100%);
-            color: white;
-            padding: 25px 0;
             text-align: center;
-            border-radius: 0 0 var(--border-radius) var(--border-radius);
-            box-shadow: var(--shadow);
-            margin-bottom: 30px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-            opacity: 0.1;
-        }
-        
-        .header-content {
-            position: relative;
-            z-index: 2;
+            padding: 30px 0;
+            margin-bottom: 40px;
+            border-bottom: 3px dashed #ff9a8b;
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            color: #ff6b6b;
             margin-bottom: 10px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            text-shadow: 2px 2px 0px rgba(255, 107, 107, 0.2);
+            position: relative;
+            display: inline-block;
         }
         
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        /* 内容卡片 */
-        .law-card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            margin-bottom: 25px;
-            padding: 30px;
-            transition: var(--transition);
-            border-left: 5px solid var(--primary-color);
-        }
-        
-        .law-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-        }
-        
-        .chapter-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #f0f0f0;
-        }
-        
-        .chapter-icon {
-            background-color: var(--secondary-color);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-size: 1.5rem;
-            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
-        }
-        
-        .chapter-title {
-            font-size: 1.8rem;
-            color: var(--dark-color);
-        }
-        
-        .article {
-            margin-bottom: 25px;
-            padding-left: 10px;
-            border-left: 3px solid transparent;
-            transition: var(--transition);
-        }
-        
-        .article:hover {
-            border-left: 3px solid var(--accent-color);
-            padding-left: 15px;
-        }
-        
-        .article-number {
-            font-weight: bold;
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-        
-        .article-content {
-            font-size: 1.1rem;
-            color: #444;
-        }
-        
-        .highlight {
-            background-color: rgba(255, 159, 67, 0.15);
-            padding: 15px;
-            border-radius: var(--border-radius);
-            margin: 20px 0;
-            border-left: 4px solid var(--accent-color);
-        }
-        
-        /* 页脚 */
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 25px 0;
-            color: #666;
-            border-top: 1px solid #eee;
-            font-size: 0.95rem;
-        }
-        
-        .dog-icon {
+        h1:after {
+            content: "🐶";
+            position: absolute;
+            top: -10px;
+            right: -40px;
             font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .dog-section {
+            flex: 1 1 300px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 2px solid #ffd6d6;
+            transition: transform 0.3s ease;
+        }
+        
+        .dog-section:hover {
+            transform: translateY(-5px);
+        }
+        
+        h2 {
+            color: #ff8e72;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px dotted #ffd6d6;
+            font-size: 1.8rem;
+        }
+        
+        .svg-container {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid #ffd6d6;
+        }
+        
+        .dog-svg {
+            width: 80%;
+            height: auto;
+            max-width: 250px;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 20px;
+        }
+        
+        .dog-traits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .trait {
+            background-color: #fff5f5;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            color: #ff6b6b;
+            border: 1px solid #ffd6d6;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .trait i {
+            font-size: 1rem;
+        }
+        
+        .quote-section {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid #ff8e72;
+        }
+        
+        .quote {
+            font-size: 1.4rem;
+            color: #555;
+            font-style: italic;
+            text-align: center;
+            line-height: 1.8;
+            position: relative;
+        }
+        
+        .quote:before, .quote:after {
+            content: '"';
+            font-size: 3rem;
+            color: #ffd6d6;
+            position: absolute;
+        }
+        
+        .quote:before {
+            top: -10px;
+            left: -10px;
+        }
+        
+        .quote:after {
+            bottom: -30px;
+            right: -10px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 2px dashed #ffd6d6;
+            margin-top: 20px;
         }
         
         /* 响应式设计 */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
-            .subtitle {
+            .tagline {
                 font-size: 1rem;
-                padding: 0 15px;
             }
             
-            .law-card {
-                padding: 20px;
+            .main-content {
+                flex-direction: column;
+                gap: 20px;
             }
             
-            .chapter-title {
-                font-size: 1.5rem;
+            .dog-section {
+                flex: 1 1 100%;
             }
             
-            .chapter-icon {
-                width: 40px;
-                height: 40px;
+            .svg-container {
+                height: 250px;
+            }
+            
+            .quote {
                 font-size: 1.2rem;
-            }
-            
-            .article-content {
-                font-size: 1rem;
             }
         }
         
@@ -208,312 +212,186 @@
                 font-size: 1.8rem;
             }
             
-            .container {
-                padding: 0 15px;
+            .svg-container {
+                height: 200px;
             }
             
-            .law-card {
-                padding: 15px;
+            .dog-traits {
+                justify-content: center;
             }
             
-            .chapter-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .chapter-icon {
-                margin-bottom: 10px;
+            .trait {
+                padding: 8px 15px;
+                font-size: 0.85rem;
             }
         }
-        
-        /* 暗色模式切换 */
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--dark-color);
-            color: white;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            box-shadow: var(--shadow);
-            z-index: 1000;
-            transition: var(--transition);
-        }
-        
-        .theme-toggle:hover {
-            background: var(--primary-color);
-            transform: rotate(30deg);
-        }
-        
-        /* 暗色模式样式 */
-        body.dark-mode {
-            background-color: #1a1a2e;
-            background-image: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
-            color: #e6e6e6;
-        }
-        
-        body.dark-mode .law-card {
-            background-color: #2d3748;
-            color: #e6e6e6;
-            border-left-color: var(--secondary-color);
-        }
-        
-        body.dark-mode .chapter-title {
-            color: #f0f0f0;
-        }
-        
-        body.dark-mode .article-content {
-            color: #d1d1d1;
-        }
-        
-        body.dark-mode .highlight {
-            background-color: rgba(255, 159, 67, 0.1);
-            border-left-color: var(--accent-color);
-        }
-        
-        body.dark-mode footer {
-            color: #aaa;
-            border-top-color: #444;
-        }
-        
-        /* 动画效果 */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .law-card {
-            animation: fadeIn 0.5s ease forwards;
-        }
-        
-        .law-card:nth-child(2) { animation-delay: 0.1s; }
-        .law-card:nth-child(3) { animation-delay: 0.2s; }
-        .law-card:nth-child(4) { animation-delay: 0.3s; }
-        .law-card:nth-child(5) { animation-delay: 0.4s; }
-        .law-card:nth-child(6) { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
-    <!-- 暗色模式切换按钮 -->
-    <button class="theme-toggle" id="themeToggle">
-        <i class="fas fa-moon"></i>
-    </button>
-    
-    <!-- 页面头部 -->
-    <header>
-        <div class="header-content">
-            <h1>单身狗保护法</h1>
-            <p class="subtitle">为保障单身人士的合法权益，尊重个人生活选择自由，促进社会多元包容与和谐发展</p>
-        </div>
-    </header>
-    
     <div class="container">
-        <!-- 第一章 -->
-        <section class="law-card">
-            <div class="chapter-header">
-                <div class="chapter-icon">
-                    <i class="fas fa-book"></i>
-                </div>
-                <h2 class="chapter-title">第一章 总则</h2>
-            </div>
-            
-            <div class="article">
-                <div class="article-number">第一条</div>
-                <div class="article-content">为保障单身人士的合法权益，尊重个人生活选择自由，促进社会多元包容与和谐发展，制定本法。</div>
-            </div>
-            
-            <div class="article">
-                <div class="article-number">第二条</div>
-                <div class="article-content">本法所称单身公民（俗称"单身狗"），是指已达法定成年年龄、具有完全民事行为能力、未处于法律认可的婚姻或事实婚姻关系中的自然人。</div>
-            </div>
-            
-            <div class="article">
-                <div class="article-number">第三条</div>
-                <div class="article-content">社会、家庭及个人应当共同尊重和保障单身公民的合法权益。禁止任何形式的基于单身状况的歧视、侮辱、不当催婚或变相施加压力。</div>
-            </div>
-            
-            <div class="highlight">
-                <div class="article-number">特别条款</div>
-                <div class="article-content">未经单身狗许可，不得在其面前炫狗粮。单身公民的人格尊严、生活安宁与自主选择权神圣不可侵犯。</div>
-            </div>
-            
-            <div class="article">
-                <div class="article-number">第四条 单身狗权益的终止和再生</div>
-                <div class="article-content">2只单身狗确认爱慕关系后，自动退出单身狗保护法的保护。任何人员都有随时成为单身狗的权利，任何一方发出分手通知即完成单身狗身份的华丽转变。</div>
-            </div>
-            <div class="highlight">
-                <div class="article-number">特别条款</div>
-                <div class="article-content">鱼塘狗脚踏多条船，不是单身狗，不受本法保护，可痛打落水狗。</div>
-            </div>
-        </section>
+        <header>
+            <h1>单身狗的世界</h1>
+            <p class="tagline">自由自在，无拘无束，享受一个人的精彩时光</p>
+        </header>
         
-        <!-- 第二章 -->
-        <section class="law-card">
-            <div class="chapter-header">
-                <div class="chapter-icon">
-                    <i class="fas fa-gavel"></i>
+        <div class="main-content">
+            <section class="dog-section">
+                <h2><i class="fas fa-dog"></i> 快乐的单身狗</h2>
+                <div class="svg-container">
+                    <svg class="dog-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- 头部 -->
+                        <ellipse cx="100" cy="70" rx="50" ry="40" fill="#FFB6C1" stroke="#FF8E9D" stroke-width="2"/>
+                        
+                        <!-- 耳朵 -->
+                        <ellipse cx="65" cy="45" rx="12" ry="20" fill="#FFB6C1" stroke="#FF8E9D" stroke-width="2"/>
+                        <ellipse cx="135" cy="45" rx="12" ry="20" fill="#FFB6C1" stroke="#FF8E9D" stroke-width="2"/>
+                        
+                        <!-- 眼睛 -->
+                        <circle cx="85" cy="65" r="6" fill="#333"/>
+                        <circle cx="115" cy="65" r="6" fill="#333"/>
+                        
+                        <!-- 鼻子 -->
+                        <ellipse cx="100" cy="80" rx="8" ry="6" fill="#333"/>
+                        
+                        <!-- 嘴巴 -->
+                        <path d="M 90 90 Q 100 95 110 90" stroke="#333" stroke-width="2" fill="none"/>
+                        
+                        <!-- 舌头 -->
+                        <ellipse cx="100" cy="95" rx="5" ry="3" fill="#FF6B6B"/>
+                        
+                        <!-- 身体 -->
+                        <ellipse cx="100" cy="150" rx="60" ry="40" fill="#FFB6C1" stroke="#FF8E9D" stroke-width="2"/>
+                        
+                        <!-- 腿 -->
+                        <rect x="65" y="150" width="10" height="30" rx="5" fill="#FFB6C1" stroke="#FF8E9D" stroke-width="2"/>
+                        <rect x="85" y="150" width="10" height="30" rx="5" fill="#FFB6C1" stroke="#FF8E9D" stroke-width="2"/>
+                        <rect x="105" y="150" width="10" height="30" rx="5" fill="#FFB6C1" stroke="#FF8E9D" stroke-width="2"/>
+                        <rect x="125" y="150" width="10" height="30" rx="5" fill="#FFB6C1" stroke="#FF8E9D" stroke-width="2"/>
+                        
+                        <!-- 尾巴 -->
+                        <path d="M 160 130 Q 180 110 170 90 Q 160 100 160 110" fill="#FFB6C1" stroke="#FF8E9D" stroke-width="2"/>
+                        
+                        <!-- 心形 -->
+                        <path d="M 40 60 Q 35 40 25 45 Q 15 50 20 65 Q 25 80 40 85 Q 55 80 60 65 Q 65 50 55 45 Q 45 40 40 60" fill="#FF6B6B" opacity="0.7"/>
+                    </svg>
                 </div>
-                <h2 class="chapter-title">第二章 基本权益</h2>
-            </div>
-            
-            <div class="article">
-                <div class="article-number">第五条 人格尊严与选择自由权</div>
-                <div class="article-content">任何组织或个人不得以单身状态为由，对公民进行贬低、嘲讽、人格侮辱或实施精神压迫。公民享有单身的权利，任何干涉行为均违背本法的行为。</div>
-            </div>
-            
-            <div class="article">
-                <div class="article-number">第六条 生活安宁与隐私权</div>
-                <div class="article-content">单身公民享有其个人生活、情感状态、社交安排不受无端窥探、打听、评议及公开传播的权利。未经本人明确同意，禁止以"关心"为名频繁进行 intrusive 的催婚、介绍相亲等侵扰行为。</div>
-            </div>
-            
-            <div class="article">
-                <div class="article-number">第七条 平等消费与发展权</div>
-                <div class="article-content">在住房、信贷、旅游、餐饮、公共服务及其他消费领域，经营者不得设置基于婚姻状况的歧视性条款或价格（如"单身附加费"、"仅限情侣/家庭"的歧视性优惠）。单身公民享有平等获得经济资源、职业发展和社会参与的机会。</div>
-            </div>
-            
-            <div class="article">
-                <div class="article-number">第八条 特定情形保障权</div>
-                <div class="article-content">在家庭聚会、节假日等场合，单身公民享有免受集体催婚、对比、说教的权利。其选择参与或不参与特定社交活动的意愿应受尊重。国家鼓励弘扬多元家庭观念，淡化"单身焦虑"的社会氛围。</div>
-            </div>
-            
-            <div class="article">
-                <div class="article-number">第九条 情感健康权</div>
-                <div class="article-content">国家支持建立健全社会心理服务体系，为有需要的单身公民提供心理健康支持。禁止任何组织或个人散布"单身有害论"、"不完整人生"等不当言论，损害单身公民的情感健康。</div>
-            </div>
-        </section>
-        
-        <!-- 第三章 -->
-        <section class="law-card">
-            <div class="chapter-header">
-                <div class="chapter-icon">
-                    <i class="fas fa-shield-alt"></i>
+                <p class="description">
+                    单身狗的世界充满了自由与独立。我们享受着一个人的时光，追求自己的兴趣，不受约束地探索生活的无限可能。快乐单身狗，活出自己的精彩！
+                </p>
+                <div class="dog-traits">
+                    <div class="trait"><i class="fas fa-gamepad"></i> 游戏自由</div>
+                    <div class="trait"><i class="fas fa-utensils"></i> 美食随意</div>
+                    <div class="trait"><i class="fas fa-bed"></i> 睡到自然醒</div>
+                    <div class="trait"><i class="fas fa-money-bill-wave"></i> 财务自主</div>
                 </div>
-                <h2 class="chapter-title">第三章 社会保障与公共服务</h2>
-            </div>
+            </section>
             
-            <div class="article">
-                <div class="article-number">第十条</div>
-                <div class="article-content">公共服务机构、用人单位及其他组织，在组织活动、分配福利时，应确保不以"情侣"或"家庭"作为基本参与或享受单位，避免变相排除单身公民。</div>
-            </div>
-        </section>
-        
-        <!-- 第四章 -->
-        <section class="law-card">
-            <div class="chapter-header">
-                <div class="chapter-icon">
-                    <i class="fas fa-balance-scale"></i>
+            <section class="dog-section">
+                <h2><i class="fas fa-paw"></i> 思考的单身狗</h2>
+                <div class="svg-container">
+                    <svg class="dog-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- 头部 -->
+                        <ellipse cx="100" cy="70" rx="50" ry="40" fill="#A8E6CF" stroke="#7BCBAC" stroke-width="2"/>
+                        
+                        <!-- 耳朵 -->
+                        <ellipse cx="65" cy="45" rx="12" ry="20" fill="#A8E6CF" stroke="#7BCBAC" stroke-width="2"/>
+                        <ellipse cx="135" cy="45" rx="12" ry="20" fill="#A8E6CF" stroke="#7BCBAC" stroke-width="2"/>
+                        
+                        <!-- 眼睛（思考状态） -->
+                        <ellipse cx="85" cy="65" rx="8" ry="4" fill="#333"/>
+                        <ellipse cx="115" cy="65" rx="8" ry="4" fill="#333"/>
+                        
+                        <!-- 眼镜 -->
+                        <circle cx="85" cy="65" r="12" fill="none" stroke="#333" stroke-width="2"/>
+                        <circle cx="115" cy="65" r="12" fill="none" stroke="#333" stroke-width="2"/>
+                        <line x1="97" y1="65" x2="103" y2="65" stroke="#333" stroke-width="2"/>
+                        
+                        <!-- 鼻子 -->
+                        <ellipse cx="100" cy="80" rx="8" ry="6" fill="#333"/>
+                        
+                        <!-- 嘴巴（思考状） -->
+                        <path d="M 90 90 Q 100 85 110 90" stroke="#333" stroke-width="2" fill="none"/>
+                        
+                        <!-- 身体 -->
+                        <ellipse cx="100" cy="150" rx="60" ry="40" fill="#A8E6CF" stroke="#7BCBAC" stroke-width="2"/>
+                        
+                        <!-- 腿（坐着） -->
+                        <rect x="75" y="150" width="10" height="25" rx="5" fill="#A8E6CF" stroke="#7BCBAC" stroke-width="2"/>
+                        <rect x="115" y="150" width="10" height="25" rx="5" fill="#A8E6CF" stroke="#7BCBAC" stroke-width="2"/>
+                        
+                        <!-- 前爪（托腮思考） -->
+                        <ellipse cx="75" cy="120" rx="15" ry="8" fill="#A8E6CF" stroke="#7BCBAC" stroke-width="2" transform="rotate(30 75 120)"/>
+                        <ellipse cx="75" cy="110" rx="8" ry="15" fill="#A8E6CF" stroke="#7BCBAC" stroke-width="2"/>
+                        
+                        <!-- 问号气泡 -->
+                        <ellipse cx="160" cy="50" rx="30" ry="25" fill="white" stroke="#7BCBAC" stroke-width="2"/>
+                        <text x="160" y="55" text-anchor="middle" font-size="24" fill="#7BCBAC">?</text>
+                        <polygon points="140,70 130,80 150,75" fill="white" stroke="#7BCBAC" stroke-width="2"/>
+                    </svg>
                 </div>
-                <h2 class="chapter-title">第四章 救济与责任</h2>
-            </div>
-            
-            <div class="article">
-                <div class="article-number">第十一条</div>
-                <div class="article-content">任何公民的单身权益受到侵害时，有权依法进行申辩、投诉，或向有关行政主管部门举报，亦可向人民法院提起诉讼。</div>
-            </div>
-            
-            <div class="article">
-                <div class="article-number">第十二条</div>
-                <div class="article-content">违反本法规定，对单身公民实施歧视、侮辱、严重干扰其生活安宁或造成其他损害的，侵权人应承担停止侵害、赔礼道歉、消除影响、赔偿损失等民事责任；构成违反治安管理行为的，依法给予治安管理处罚。</div>
-            </div>
-        </section>
-        
-        <!-- 第五章 -->
-        <section class="law-card">
-            <div class="chapter-header">
-                <div class="chapter-icon">
-                    <i class="fas fa-file-contract"></i>
+                <p class="description">
+                    单身狗也有深度思考的时候。我们在独处中反思自我，规划未来，思考人生的意义。一个人的时光是自我成长的最佳机会，让我们成为更好的自己。
+                </p>
+                <div class="dog-traits">
+                    <div class="trait"><i class="fas fa-book"></i> 学习成长</div>
+                    <div class="trait"><i class="fas fa-hiking"></i> 独自旅行</div>
+                    <div class="trait"><i class="fas fa-music"></i> 享受音乐</div>
+                    <div class="trait"><i class="fas fa-film"></i> 追剧自由</div>
                 </div>
-                <h2 class="chapter-title">第五章 附则</h2>
-            </div>
-            
-            <div class="article">
-                <div class="article-number">第十三条</div>
-                <div class="article-content">本法所称"不当催婚"，是指违背当事人意愿，持续施加压力迫使或诱导其进入恋爱、婚姻关系的行为，具体认定需结合行为频率、方式、后果及当事人主观感受综合判断。</div>
-            </div>
-            
-            <div class="article">
-                <div class="article-number">第十四条</div>
-                <div class="article-content">本法自 公布之日起施行。</div>
-            </div>
-        </section>
-
-
-
-
-    </div>
-    
-    <!-- 页脚 -->
-    <footer class="container">
-        <div class="dog-icon">
-            <i class="fas fa-paw"></i>
+            </section>
         </div>
-        <p>单身狗保护法 · 尊重个人选择 · 促进社会包容</p>
-        <p>© 2025 单身狗权益保障委员会 · 本内容仅供娱乐展示</p>
-        <p><a href="mailto:admin@singledog.world">联系 admin@singledog.world</a></p>
-    </footer>
+        
+        <section class="quote-section">
+            <p class="quote">
+                单身不是标签，而是一种生活状态。它代表着自由、独立和自我成长。在单身狗的世界里，我们不被定义，不受约束，活出最真实的自己。一个人的生活也可以很精彩！
+            </p>
+            <p class="quote">
+                <a href="singledoglaw.html" target=_blank>单身狗保护法</a>
+            </p>
+        </section>
+        
+        <footer class="footer">
+            <p>© 2025 单身狗的世界 | 设计灵感来源于所有享受独处时光的朋友们</p>
+            <p>单身快乐，自由万岁！ 🐶</p>
+        </footer>
+    </div>
 
     <script>
-        // 暗色模式切换功能
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = themeToggle.querySelector('i');
+        // 添加SVG交互效果
+        document.querySelectorAll('.dog-svg').forEach(svg => {
+            svg.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            svg.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
         
-        // 检查本地存储中的主题偏好
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            document.body.classList.add('dark-mode');
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
+        // 响应式调整
+        function adjustLayout() {
+            const svgContainers = document.querySelectorAll('.svg-container');
+            const screenWidth = window.innerWidth;
+            
+            if (screenWidth < 768) {
+                svgContainers.forEach(container => {
+                    container.style.height = '250px';
+                });
+            } else if (screenWidth < 480) {
+                svgContainers.forEach(container => {
+                    container.style.height = '200px';
+                });
+            } else {
+                svgContainers.forEach(container => {
+                    container.style.height = '300px';
+                });
+            }
         }
         
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            
-            if (document.body.classList.contains('dark-mode')) {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-                localStorage.setItem('darkMode', 'disabled');
-            }
-        });
-        
-        // 为每个条款添加点击效果
-        document.querySelectorAll('.article').forEach(article => {
-            article.addEventListener('click', function() {
-                this.style.backgroundColor = this.style.backgroundColor === 'rgb(248, 249, 250)' ? '' : '#f8f9fa';
-                
-                if (document.body.classList.contains('dark-mode')) {
-                    this.style.backgroundColor = this.style.backgroundColor === 'rgb(45, 55, 72)' ? '' : '#2d3748';
-                }
-            });
-        });
-        
-        // 添加滚动动画效果
-        window.addEventListener('scroll', () => {
-            const cards = document.querySelectorAll('.law-card');
-            const windowHeight = window.innerHeight;
-            
-            cards.forEach(card => {
-                const cardPosition = card.getBoundingClientRect().top;
-                const scrollPosition = windowHeight - 100;
-                
-                if (cardPosition < scrollPosition) {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }
-            });
-        });
-        
-        // 页面加载后触发一次滚动事件以初始化动画
-        window.dispatchEvent(new Event('scroll'));
+        // 页面加载和窗口大小变化时调整布局
+        window.addEventListener('load', adjustLayout);
+        window.addEventListener('resize', adjustLayout);
     </script>
 </body>
 </html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单身狗保护法</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        :root {
+            --primary-color: #e74c3c;
+            --secondary-color: #3498db;
+            --light-color: #f8f9fa;
+            --dark-color: #2c3e50;
+            --accent-color: #ff9f43;
+            --text-color: #333;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 40px;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #c0392b 100%);
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.1;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* 内容卡片 */
+        .law-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 25px;
+            padding: 30px;
+            transition: var(--transition);
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .law-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        
+        .chapter-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .chapter-icon {
+            background-color: var(--secondary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+        }
+        
+        .chapter-title {
+            font-size: 1.8rem;
+            color: var(--dark-color);
+        }
+        
+        .article {
+            margin-bottom: 25px;
+            padding-left: 10px;
+            border-left: 3px solid transparent;
+            transition: var(--transition);
+        }
+        
+        .article:hover {
+            border-left: 3px solid var(--accent-color);
+            padding-left: 15px;
+        }
+        
+        .article-number {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .article-content {
+            font-size: 1.1rem;
+            color: #444;
+        }
+        
+        .highlight {
+            background-color: rgba(255, 159, 67, 0.15);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        /* 页脚 */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px 0;
+            color: #666;
+            border-top: 1px solid #eee;
+            font-size: 0.95rem;
+        }
+        
+        .dog-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+            
+            .law-card {
+                padding: 20px;
+            }
+            
+            .chapter-title {
+                font-size: 1.5rem;
+            }
+            
+            .chapter-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .article-content {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .law-card {
+                padding: 15px;
+            }
+            
+            .chapter-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .chapter-icon {
+                margin-bottom: 10px;
+            }
+        }
+        
+        /* 暗色模式切换 */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--dark-color);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .theme-toggle:hover {
+            background: var(--primary-color);
+            transform: rotate(30deg);
+        }
+        
+        /* 暗色模式样式 */
+        body.dark-mode {
+            background-color: #1a1a2e;
+            background-image: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+            color: #e6e6e6;
+        }
+        
+        body.dark-mode .law-card {
+            background-color: #2d3748;
+            color: #e6e6e6;
+            border-left-color: var(--secondary-color);
+        }
+        
+        body.dark-mode .chapter-title {
+            color: #f0f0f0;
+        }
+        
+        body.dark-mode .article-content {
+            color: #d1d1d1;
+        }
+        
+        body.dark-mode .highlight {
+            background-color: rgba(255, 159, 67, 0.1);
+            border-left-color: var(--accent-color);
+        }
+        
+        body.dark-mode footer {
+            color: #aaa;
+            border-top-color: #444;
+        }
+        
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .law-card {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        .law-card:nth-child(2) { animation-delay: 0.1s; }
+        .law-card:nth-child(3) { animation-delay: 0.2s; }
+        .law-card:nth-child(4) { animation-delay: 0.3s; }
+        .law-card:nth-child(5) { animation-delay: 0.4s; }
+        .law-card:nth-child(6) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <!-- 暗色模式切换按钮 -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <!-- 页面头部 -->
+    <header>
+        <div class="header-content">
+            <h1>单身狗保护法</h1>
+            <p class="subtitle">为保障单身人士的合法权益，尊重个人生活选择自由，促进社会多元包容与和谐发展</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- 第一章 -->
+        <section class="law-card">
+            <div class="chapter-header">
+                <div class="chapter-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h2 class="chapter-title">第一章 总则</h2>
+            </div>
+            
+            <div class="article">
+                <div class="article-number">第一条</div>
+                <div class="article-content">为保障单身人士的合法权益，尊重个人生活选择自由，促进社会多元包容与和谐发展，制定本法。</div>
+            </div>
+            
+            <div class="article">
+                <div class="article-number">第二条</div>
+                <div class="article-content">本法所称单身公民（俗称"单身狗"），是指已达法定成年年龄、具有完全民事行为能力、未处于法律认可的婚姻或事实婚姻关系中的自然人。</div>
+            </div>
+            
+            <div class="article">
+                <div class="article-number">第三条</div>
+                <div class="article-content">社会、家庭及个人应当共同尊重和保障单身公民的合法权益。禁止任何形式的基于单身状况的歧视、侮辱、不当催婚或变相施加压力。</div>
+            </div>
+            
+            <div class="highlight">
+                <div class="article-number">特别条款</div>
+                <div class="article-content">未经单身狗许可，不得在其面前炫狗粮。单身公民的人格尊严、生活安宁与自主选择权神圣不可侵犯。</div>
+            </div>
+            
+            <div class="article">
+                <div class="article-number">第四条 单身狗权益的终止和再生</div>
+                <div class="article-content">2只单身狗确认爱慕关系后，自动退出单身狗保护法的保护。任何人员都有随时成为单身狗的权利，任何一方发出分手通知即完成单身狗身份的华丽转变。</div>
+            </div>
+            <div class="highlight">
+                <div class="article-number">特别条款</div>
+                <div class="article-content">鱼塘狗脚踏多条船，不是单身狗，不受本法保护，可痛打落水狗。</div>
+            </div>
+        </section>
+        
+        <!-- 第二章 -->
+        <section class="law-card">
+            <div class="chapter-header">
+                <div class="chapter-icon">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <h2 class="chapter-title">第二章 基本权益</h2>
+            </div>
+            
+            <div class="article">
+                <div class="article-number">第五条 人格尊严与选择自由权</div>
+                <div class="article-content">任何组织或个人不得以单身状态为由，对公民进行贬低、嘲讽、人格侮辱或实施精神压迫。公民享有单身的权利，任何干涉行为均违背本法的行为。</div>
+            </div>
+            
+            <div class="article">
+                <div class="article-number">第六条 生活安宁与隐私权</div>
+                <div class="article-content">单身公民享有其个人生活、情感状态、社交安排不受无端窥探、打听、评议及公开传播的权利。未经本人明确同意，禁止以"关心"为名频繁进行 intrusive 的催婚、介绍相亲等侵扰行为。</div>
+            </div>
+            
+            <div class="article">
+                <div class="article-number">第七条 平等消费与发展权</div>
+                <div class="article-content">在住房、信贷、旅游、餐饮、公共服务及其他消费领域，经营者不得设置基于婚姻状况的歧视性条款或价格（如"单身附加费"、"仅限情侣/家庭"的歧视性优惠）。单身公民享有平等获得经济资源、职业发展和社会参与的机会。</div>
+            </div>
+            
+            <div class="article">
+                <div class="article-number">第八条 特定情形保障权</div>
+                <div class="article-content">在家庭聚会、节假日等场合，单身公民享有免受集体催婚、对比、说教的权利。其选择参与或不参与特定社交活动的意愿应受尊重。国家鼓励弘扬多元家庭观念，淡化"单身焦虑"的社会氛围。</div>
+            </div>
+            
+            <div class="article">
+                <div class="article-number">第九条 情感健康权</div>
+                <div class="article-content">国家支持建立健全社会心理服务体系，为有需要的单身公民提供心理健康支持。禁止任何组织或个人散布"单身有害论"、"不完整人生"等不当言论，损害单身公民的情感健康。</div>
+            </div>
+        </section>
+        
+        <!-- 第三章 -->
+        <section class="law-card">
+            <div class="chapter-header">
+                <div class="chapter-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h2 class="chapter-title">第三章 社会保障与公共服务</h2>
+            </div>
+            
+            <div class="article">
+                <div class="article-number">第十条</div>
+                <div class="article-content">公共服务机构、用人单位及其他组织，在组织活动、分配福利时，应确保不以"情侣"或"家庭"作为基本参与或享受单位，避免变相排除单身公民。</div>
+            </div>
+        </section>
+        
+        <!-- 第四章 -->
+        <section class="law-card">
+            <div class="chapter-header">
+                <div class="chapter-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h2 class="chapter-title">第四章 救济与责任</h2>
+            </div>
+            
+            <div class="article">
+                <div class="article-number">第十一条</div>
+                <div class="article-content">任何公民的单身权益受到侵害时，有权依法进行申辩、投诉，或向有关行政主管部门举报，亦可向人民法院提起诉讼。</div>
+            </div>
+            
+            <div class="article">
+                <div class="article-number">第十二条</div>
+                <div class="article-content">违反本法规定，对单身公民实施歧视、侮辱、严重干扰其生活安宁或造成其他损害的，侵权人应承担停止侵害、赔礼道歉、消除影响、赔偿损失等民事责任；构成违反治安管理行为的，依法给予治安管理处罚。</div>
+            </div>
+        </section>
+        
+        <!-- 第五章 -->
+        <section class="law-card">
+            <div class="chapter-header">
+                <div class="chapter-icon">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <h2 class="chapter-title">第五章 附则</h2>
+            </div>
+            
+            <div class="article">
+                <div class="article-number">第十三条</div>
+                <div class="article-content">本法所称"不当催婚"，是指违背当事人意愿，持续施加压力迫使或诱导其进入恋爱、婚姻关系的行为，具体认定需结合行为频率、方式、后果及当事人主观感受综合判断。</div>
+            </div>
+            
+            <div class="article">
+                <div class="article-number">第十四条</div>
+                <div class="article-content">本法自 公布之日起施行。</div>
+            </div>
+        </section>
+
+
+
+
+    </div>
+    
+    <!-- 页脚 -->
+    <footer class="container">
+        <div class="dog-icon">
+            <i class="fas fa-paw"></i>
+        </div>
+        <p>单身狗保护法 · 尊重个人选择 · 促进社会包容</p>
+        <p>© 2025 单身狗权益保障委员会 · 本内容仅供娱乐展示</p>
+        <p><a href="mailto:admin@singledog.world">联系 admin@singledog.world</a></p>
+    </footer>
+
+    <script>
+        // 暗色模式切换功能
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // 检查本地存储中的主题偏好
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+        
+        // 为每个条款添加点击效果
+        document.querySelectorAll('.article').forEach(article => {
+            article.addEventListener('click', function() {
+                this.style.backgroundColor = this.style.backgroundColor === 'rgb(248, 249, 250)' ? '' : '#f8f9fa';
+                
+                if (document.body.classList.contains('dark-mode')) {
+                    this.style.backgroundColor = this.style.backgroundColor === 'rgb(45, 55, 72)' ? '' : '#2d3748';
+                }
+            });
+        });
+        
+        // 添加滚动动画效果
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.law-card');
+            const windowHeight = window.innerHeight;
+            
+            cards.forEach(card => {
+                const cardPosition = card.getBoundingClientRect().top;
+                const scrollPosition = windowHeight - 100;
+                
+                if (cardPosition < scrollPosition) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // 页面加载后触发一次滚动事件以初始化动画
+        window.dispatchEvent(new Event('scroll'));
+    </script>
+</body>
+</html>
