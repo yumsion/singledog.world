@@ -286,7 +286,7 @@
                 </div>
             </section>
             
-            <section class="dog-section" onclick="./medal/index.html">
+            <section class="dog-section">
                 <h2><i class="fas fa-paw"></i> 思考的单身狗</h2>
                 <div class="svg-container">
                     <svg class="dog-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -341,7 +341,7 @@
             </section>
 
             <section class="dog-section">
-                <h2><i class="fas fa-paw"></i> 单身狗的勋章</h2>
+                <h2><i class="fas fa-paw"></i> <a href="./medal/index.html" target="_blank">单身狗的勋章</a></h2>
                 <div class="svg-container">
 <svg class="dog-svg"
    width="200"
@@ -412,14 +412,6 @@
 
     <script>
         // 添加SVG交互效果
-    // 为所有带 data-link 属性的 section 添加点击跳转
-    document.querySelectorAll('section[data-link]').forEach(section => {
-        section.addEventListener('click', function() {
-            const link = this.getAttribute('data-link');
-            if (link) window.location.href = link;
-        });
-        section.style.cursor = 'pointer';
-    });
         document.querySelectorAll('.dog-svg').forEach(svg => {
             svg.addEventListener('mouseenter', function() {
                 this.style.transform = 'scale(1.05)';
