@@ -286,7 +286,7 @@
                 </div>
             </section>
             
-            <section class="dog-section">
+            <section class="dog-section" onclick="./medal/index.html">
                 <h2><i class="fas fa-paw"></i> 思考的单身狗</h2>
                 <div class="svg-container">
                     <svg class="dog-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -384,13 +384,13 @@
 </svg>
                 </div>
                 <p class="description">
-                    单身狗也有深度思考的时候。我们在独处中反思自我，规划未来，思考人生的意义。一个人的时光是自我成长的最佳机会，让我们成为更好的自己。
+                    时光如流水匆匆过去，岁月留下了皱纹，也留下了成长。
                 </p>
                 <div class="dog-traits">
-                    <div class="trait"><i class="fas fa-book"></i> 学习成长</div>
-                    <div class="trait"><i class="fas fa-hiking"></i> 独自旅行</div>
-                    <div class="trait"><i class="fas fa-music"></i> 享受音乐</div>
-                    <div class="trait"><i class="fas fa-film"></i> 追剧自由</div>
+                    <div class="trait"><i class="fas fa-book"></i> 成就 </div>
+                    <div class="trait"><i class="fas fa-hiking"></i> 感悟 </div>
+                    <div class="trait"><i class="fas fa-music"></i> 追寻 </div>
+                    <div class="trait"><i class="fas fa-film"></i> 记录 </div>
                 </div>
             </section>
         </div>
@@ -412,6 +412,14 @@
 
     <script>
         // 添加SVG交互效果
+    // 为所有带 data-link 属性的 section 添加点击跳转
+    document.querySelectorAll('section[data-link]').forEach(section => {
+        section.addEventListener('click', function() {
+            const link = this.getAttribute('data-link');
+            if (link) window.location.href = link;
+        });
+        section.style.cursor = 'pointer';
+    });
         document.querySelectorAll('.dog-svg').forEach(svg => {
             svg.addEventListener('mouseenter', function() {
                 this.style.transform = 'scale(1.05)';
